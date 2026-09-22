@@ -1,0 +1,107 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="jurusan-container">
+    <h1 class="jurusan-title">Program Keahlian - SMKN 1 Cijati</h1>
+    <p class="jurusan-subtitle">Pilihan jurusan yang tersedia di sekolah kami</p>
+
+    <div class="jurusan-grid">
+
+        <div class="jurusan-card">
+            <div class="jurusan-icon">💻</div>
+            <h2>RPL</h2>
+            <p class="jurusan-fullname">Rekayasa Perangkat Lunak</p>
+            <p class="jurusan-desc">Belajar membuat aplikasi, website, dan sistem perangkat lunak menggunakan berbagai bahasa pemrograman.</p>
+        </div>
+
+        <div class="jurusan-card">
+            <div class="jurusan-icon">🚗</div>
+            <h2>TKRO</h2>
+            <p class="jurusan-fullname">Teknik Kendaraan Ringan Otomotif</p>
+            <p class="jurusan-desc">Mempelajari perawatan, perbaikan, dan teknologi mesin kendaraan ringan.</p>
+        </div>
+
+        <div class="jurusan-card">
+            <div class="jurusan-icon">📊</div>
+            <h2>BDP</h2>
+            <p class="jurusan-fullname">Bisnis Daring dan Pemasaran</p>
+            <p class="jurusan-desc">Fokus pada strategi pemasaran, bisnis digital, dan manajemen penjualan online.</p>
+        </div>
+
+        <div class="jurusan-card">
+            <div class="jurusan-icon">🌾</div>
+            <h2>APHP</h2>
+            <p class="jurusan-fullname">Agribisnis Pengolahan Hasil Pertanian</p>
+            <p class="jurusan-desc">Mempelajari pengolahan dan pengembangan produk hasil pertanian menjadi produk bernilai jual.</p>
+        </div>
+
+    </div>
+</div>
+@endsection
+
+@push('styles')
+<style>
+.jurusan-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.jurusan-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.jurusan-subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 32px;
+}
+
+.jurusan-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.jurusan-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.jurusan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+.jurusan-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.jurusan-card h2 {
+    font-size: 20px;
+    color: #2563eb;
+    margin-bottom: 4px;
+}
+
+.jurusan-fullname {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.jurusan-desc {
+    font-size: 13px;
+    color: #6b7280;
+    line-height: 1.5;
+}
